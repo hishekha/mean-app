@@ -1,0 +1,24 @@
+<div class="flex-parent">
+  <mat-toolbar color="primary" id="main-toolbar">
+    <button mat-icon-button (click)="sideBar.toggle()">
+      <mat-icon class="md-24" aria-label="menu">menu</mat-icon>
+    </button>
+    <span>Application</span>
+  </mat-toolbar>
+
+  <mat-drawer-container id="main-sidenav-container">
+    <mat-drawer mode="side" opened="true" #sideBar (window:resize)="$event.target.innerWidth<769?sideBar.close():sideBar.open()">
+      <nav>
+        <ul>
+          <li><a mat-button routerLink="/rock">Rock</a></li>
+          <li><a mat-button routerLink="/paper">Paper</a></li>
+          <li><a mat-button routerLink="/scissor">Scissor</a></li>
+        </ul>
+      </nav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+

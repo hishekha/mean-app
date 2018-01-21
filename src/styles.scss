@@ -1,0 +1,74 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+%padded {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+body, html {
+    font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    color: darkgray;
+
+    .flex-parent {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .flex-child {
+        flex: 1;
+    }
+
+    #main-toolbar {
+    
+    }
+
+    #main-sidenav-container {
+        flex: 1;
+        mat-drawer {
+            flex: 1;
+            width: 250px;
+            background-color: ghostwhite;
+            box-shadow: 6px 0 6px rgba(0,0,0,.1);
+
+            nav {
+                ul {
+                    list-style: none;
+                    margin: 0px;
+                    padding: 0px;
+                    li {
+                        a {
+                            display: block;
+                            text-align: left;
+                            font-size: 14px;
+                            line-height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+
+        mat-drawer-content {
+            section {
+                @extend %padded;
+            }
+        }
+    }
+} 
+
+
+
+
+
+
+
+
+
